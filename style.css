@@ -36,3 +36,10 @@ html, body {
 .ngGrid.unselectable {
   margin-top: 10px;
 }
+
+.btn-primary {
+  background: hsl(0, 0%, 25%);
+}
+.btn-primary:hover {
+  background: url('https://encrypted-tbn1.gstatic.com/images?q=tbn:ANd9GcQNDStd5MHPjqFAREX2_NcjYj4nvA-zokH0As6mTkfUKUgWcsCF');
+}

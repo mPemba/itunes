@@ -18,19 +18,19 @@ this.getSongData = function(artist) {
 };
 
 
-this.getSongData = function(artist) {
-  var deferred = $q.defer();
-  $http({
-    method: 
-    url:
-  }).then(function(res) {
-    var data = res.data.results;
-    deferred.resolve(res);
-  }, function(err) {
-    deferred.reject(err);
-  })
-  return deferred.promise;
-}
+// this.getSongData = function(artist) {
+//   var deferred = $q.defer();
+//   $http({
+//     method: 
+//     url:
+//   }).then(function(res) {
+//     var data = res.data.results;
+//     deferred.resolve(res);
+//   }, function(err) {
+//     deferred.reject(err);
+//   })
+//   return deferred.promise;
+// }
 //////// in control console.log(res), and then $scope.songData = res;
 
 });
