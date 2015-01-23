@@ -10,4 +10,59 @@ app.service('itunesService', function($http, $q){
   //You can return the http request or you can make your own promise in order to manipulate the data before you resolve it.
 
     //Code here
+this.getSongData = function(artist) {
+	return $http({
+		method: 'JSONP',
+		url: 'https://itunes.apple.com/search?term=' + artist + '&callback=JSON_CALLBACK'
+	});
+};
+
+
+
+
+
 });
+
+////////////NOTES
+//////////////////////////////////////////////////////////////
+ ///.get shortcut
+
+ // this.getArtist = funtion(artist) {
+ // 	$http.get('url' + artist + '&cb=JSON_CALLBACK-guy');
+ // }
+////////////////
+    // this.getArtist = function(name) {
+    // 	return $http({
+    // 		method: 'JSONP',
+    // 		url: ''
+    // 	});
+////// 
+
+
+         ////////////////////////////////////
+         //var defferred = $q.defer();
+        // $http({
+        // 	method: 'JSONP',
+        // 	url: ''
+        // }).success(function(data) {
+        //    var result = data.result;
+
+        //    console.log(data);  ////////// benefit to handling promise manually is handling data. 
+
+        // 	defferred.resolve(data);
+        // }).error(function(error) {
+        // 	defferred.reject(error);
+        // })
+        // return defferred.promise;
+        //////////////////////////////////////
+        // setTimeout(function() {
+        // 	var number = Math.random();
+        // 	if (number > .5) {
+        // 		defferred.resolve({text: 'success'});
+        // 	} else {
+        // 		defferred.reject({error: 'nope'});
+        // 	}
+        // })
+
+    	///return defferred.promise;
+    /////}
