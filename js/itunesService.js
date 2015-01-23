@@ -19,7 +19,20 @@ this.getSongData = function(artist) {
 
 
 
-
+// this.getSongData = function(artist) {
+// 	var deferred = $q.defer();
+// 	$http({
+// 		method: 'JSONP',
+// 		url: 'https://itunes.apple.com/search?term=' + artist + '&callback=JSON_CALLBACK'
+// 	}).success(function(data) {
+// 		var result = data.result;
+// 		console.log(data);
+// 		deferred.resolve(data);
+// 	}).error(function(error){
+// 	    deferred.reject(error);
+// 	})
+// 	    return deferred.promise;
+// }
 
 });
 
@@ -30,39 +43,4 @@ this.getSongData = function(artist) {
  // this.getArtist = funtion(artist) {
  // 	$http.get('url' + artist + '&cb=JSON_CALLBACK-guy');
  // }
-////////////////
-    // this.getArtist = function(name) {
-    // 	return $http({
-    // 		method: 'JSONP',
-    // 		url: ''
-    // 	});
-////// 
 
-
-         ////////////////////////////////////
-         //var defferred = $q.defer();
-        // $http({
-        // 	method: 'JSONP',
-        // 	url: ''
-        // }).success(function(data) {
-        //    var result = data.result;
-
-        //    console.log(data);  ////////// benefit to handling promise manually is handling data. 
-
-        // 	defferred.resolve(data);
-        // }).error(function(error) {
-        // 	defferred.reject(error);
-        // })
-        // return defferred.promise;
-        //////////////////////////////////////
-        // setTimeout(function() {
-        // 	var number = Math.random();
-        // 	if (number > .5) {
-        // 		defferred.resolve({text: 'success'});
-        // 	} else {
-        // 		defferred.reject({error: 'nope'});
-        // 	}
-        // })
-
-    	///return defferred.promise;
-    /////}
