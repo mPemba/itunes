@@ -18,21 +18,20 @@ this.getSongData = function(artist) {
 };
 
 
-
-// this.getSongData = function(artist) {
-// 	var deferred = $q.defer();
-// 	$http({
-// 		method: 'JSONP',
-// 		url: 'https://itunes.apple.com/search?term=' + artist + '&callback=JSON_CALLBACK'
-// 	}).success(function(data) {
-// 		var result = data.result;
-// 		console.log(data);
-// 		deferred.resolve(data);
-// 	}).error(function(error){
-// 	    deferred.reject(error);
-// 	})
-// 	    return deferred.promise;
-// }
+this.getSongData = function(artist) {
+  var deferred = $q.defer();
+  $http({
+    method: 
+    url:
+  }).then(function(res) {
+    var data = res.data.results;
+    deferred.resolve(res);
+  }, function(err) {
+    deferred.reject(err);
+  })
+  return deferred.promise;
+}
+//////// in control console.log(res), and then $scope.songData = res;
 
 });
 
